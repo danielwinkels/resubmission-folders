@@ -1,4 +1,4 @@
-=g= Verwendung
+== Verwendung
 
 Einfach in der PowerShell das Modul importieren und dann den Befehl ausführen:
 

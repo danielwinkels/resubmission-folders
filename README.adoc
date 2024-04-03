@@ -7,6 +7,13 @@ Import-Module .\PowerShell\ResubmissionFolder-Module.psm1
 New-ResubmissionFolders -FromDate 2024-01-01 -UntilDate 2024-12-13 rootdirectory
 
 Das Skript erstellt dann im angegebenen Verzeichnis die Ordnerstruktur für die Resubmission.
+Wenn das komplette Datum im Ordnernamen angegeben werden soll, muss im "ResubmissionFolder-Module.psm1" die Funktion Get-DateFolderPath angepasst werden. Hier wird zwischen zwei konkreten Implementierungen unterschieden, es kann aber gerne eine weitere Ergänzt werden.
+
+=== Komfortabler aufruf der Ordner
+Über die PowerShell-Skripte Heute, morgen und die Wochentage lässt sich schnell der korrekte Ordner für die Wiedervorlage öffnen.
+Wichtig ist, dass die richtige Version für den Ordnernamen verwendet wird. Die Skripte müssen im Wurzelverzeichnis der Ornder liegen, also im selben Verzeichnis wie die Jahresordner.
+
+Dann kann mit einem Rechtsklick auf die Datei und "Mit PowerShell ausführen" der Ordner geöffnet werden.
 
 == Bekannte Probleme
 

@@ -5,9 +5,13 @@ function New-ResubmissionFolders {
 
         [Parameter(Mandatory=$true, Position=1, HelpMessage="Specify the end date.")]
         [datetime]$UntilDate,
+        
+        [Parameter(ParameterSetName="FullDateAsFoldername", HelpMessage="Use the full date as foldername.")]
+        [bool]$fullDateAsFoldername = $false,
 
         [Parameter(Position=2, HelpMessage="Specify the start directory.")]
         [string]$StartDirectory = (Get-Location).Path
+        
     )
 
     for ($date = $FromDate; $date -le $UntilDate; $date = $date.AddDays(1)) {
@@ -18,6 +22,8 @@ function New-ResubmissionFolders {
 }
 
 # Wähle zwischen den beiden Funktionen Get-DateFolderPathDayOnly und Get-DateFolderPathFullDate
+# um den Ordnerpfad zu generieren.
+# Wirkt sich auf alle Skripte aus.
 Function Get-DateFolderPath {
     param (
         [Parameter(Mandatory=$true)]

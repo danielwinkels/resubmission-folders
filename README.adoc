@@ -1,3 +1,13 @@
 = Verwendung
 
-Einfach in der PowerShell 
+Einfach in der PowerShell das Modul importieren und dann den Befehl ausführen:
+
+Import-Module .\PowerShell\ResubmissionFolder-Module.psm1
+New-ResubmissionFolders -FromDate 2024-01-01 -UntilDate 2024-12-13 rootdirectory
+
+Das Skript erstellt dann im angegebenen Verzeichnis die Ordnerstruktur für die Resubmission.
+
+= Bekannte Probleme
+
+== Umlaute in Verzeichnisnamen werden nicht korrekt dargestellt
+März = MÃ¤rz

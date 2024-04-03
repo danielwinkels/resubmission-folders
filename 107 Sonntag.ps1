@@ -1,3 +1,3 @@
-Import-Module -Name .\PowerShell\Tagesordner.psm1 -Force
+Import-Module -Name .\PowerShell\ResubmissionFolder-Module.psm1 -Force
 
 Get-NextDayFolderPath -targetDayOfWeek 7
